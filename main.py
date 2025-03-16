@@ -4,7 +4,20 @@
 #inisialiasi
 def insialisasi_populasi():
 
+def fitness():
+
+
+def selection():
+
+
+def crossover():
+
+
+def mutation():
+
+
 
 def main():
     # inisialisasi populasi awal
     populasi_awal = insialisasi_populasi()
+
