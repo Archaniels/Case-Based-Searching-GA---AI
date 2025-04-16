@@ -87,13 +87,37 @@ def insialisasi_populasi():
     # menggunakan library random dari python untuk membuat kromosom binary berjumlah POPULATION_SIZE, atau 30 
     return [''.join(random.choice('01') for _ in range(PANJANG_KROMOSOM)) for _ in range(POPULATION_SIZE)]
 
-#Dekode kromosom
-def dekode_kromosom():
-    
+#dekode kromosom
+def dekode_kromosom(kromosom):
+    #kromosom 20 bit dibagi menjadi dua bagian 10 bit
+    x1_binary = kromosom[:BIT_PER_VAR] #ambil 10 bit pertama sebagai x1
+    x2_binary = kromosom[BIT_PER_VAR:] #ambil 10 bit pertama sebagai x2
+
+    #ubah biner ke desimal
+    x1_desimal = int(x1_binary, 2) #ubah dari biner ke integer
+    x2_desimal = int(x2_binary, 2) #ubah dari biner ke integer
+
+    #skala ke rentang [-10, 10]
+    #menggunakan linear scaling formula = nilai = batas_bawah + (range * desimal / (maksimum_desimal))
+    # xmin = -10
+    # range = 20 bit
+    # maksimum_desimal = 2^20 - 1 = 1023
+    x1 = -10 + (20 * x1_desimal / (2**BIT_PER_VAR - 1))
+    x2 = -10 + (20 * x2_desimal / (2**BIT_PER_VAR - 1))
+
+    return x1, x2
 
 #perhitungan fitness
-def fitness():
-    
+def fitness(populasi)
+    fitness_values = []
+    for kromosom in populasi:
+        # dekode kromosom menjadi nilai x1 dan x2 rentang [-10, 10]
+        x1, x2 = dekode_kromosom(kromosom)
+        # hitung nilai fitness berdasarkan x1 dan x2
+        fungsi = fungsi_matematis(x1, x2)
+        #menambahkan satu item ke list
+        fitness_values.append((kromosom, x1, x2, fungsi))
+    return fitness_values
 
 #pemilihan orang tua
 def selection():
@@ -108,7 +132,7 @@ def mutation():
     
 
 #penggantian generasi
-def Generation_Switch():
+def generation_switch():
     
 
 #main function
@@ -118,4 +142,8 @@ def main():
     print("Populasi Awal:")
     for i, kromosom in enumerate(populasi_awal, start=1):
         print(f"{i:2d}: {kromosom}")
+    fitness_pop = fitness(populasi_awal)
+    print("Fitness awal:")
+    for krom, x1, x2, funct in fitness_pop:
+        print(f"Kromosom: {krom}, x1: {x1}, x2: {x2}, Fitness: {funct}")
 
