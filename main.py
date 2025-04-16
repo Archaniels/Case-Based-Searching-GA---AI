@@ -38,27 +38,27 @@
 ## sebagaimana tercantum pada deskripsi Case Based. Lakukan analisis dan desain program GA yang Anda buat, lalu implementasikan dengan tepat.
 
 ## Hal yang harus Anda analisis dan desain:
-## • Ukuran populasi, rancangan kromosom, dan cara decode-nya
-## • Metode pemilihan orangtua
-## • Metode operasi genetik (pindah silang dan mutasi)
-## • Probabilitas operasi genetik (𝑃𝑐 dan 𝑃𝑚)
-## • Metode pergantian generasi (seleksi survivor)
-## • Kriteria penghentian evolusi (loop)
+    ## Ukuran populasi, rancangan kromosom, dan cara decode-nya
+    ## Metode pemilihan orangtua
+    ## Metode operasi genetik (pindah silang dan mutasi)
+    ## Probabilitas operasi genetik (𝑃𝑐 dan 𝑃𝑚)
+    ## Metode pergantian generasi (seleksi survivor)
+    ## Kriteria penghentian evolusi (loop)
 
 ## Proses yang harus Anda bangun/implementasikan ke dalam baris-baris program:
-## • Inisialisasi populasi
-## • Dekode kromosom
-## • Perhitungan fitness
-## • Pemilihan orangtua
-## • Crossover (pindah silang)
-## • Mutasi
-## • Pergantian Generasi
+    ## Inisialisasi populasi
+    ## Dekode kromosom
+    ## Perhitungan fitness
+    ## Pemilihan orangtua
+    ## Crossover (pindah silang)
+    ## Mutasi
+    ## Pergantian Generasi
 ## Catatan: Proses-proses di atas harus dibangun tanpa menggunakan Library!
 
 ## 2. Output Program
 ## Dengan masalah yang didefinisikan di atas, output dari program Anda:
-## • kromosom terbaik, dan
-## • nilai 𝒙𝟏 dan 𝒙𝟐 hasil dekode kromosom terbaik tersebut
+    ## kromosom terbaik, dan
+    ## nilai 𝒙𝟏 dan 𝒙𝟐 hasil dekode kromosom terbaik tersebut
 
 ## ================================================================================================================== 
 ##                                                 PROGRAM
@@ -70,7 +70,7 @@ import math
 # konstanta
 PANJANG_KROMOSOM = 20 # panjang kromosom binary
 BIT_PER_VAR = 10 # variable x1 dan x2 direpresentasikan dengan 10 bit dalam kromosaom binary
-POPULATION_SIZE = 30 # ukuran populasi
+POPULATION_SIZE = 50 # ukuran populasi
 P_C = 0.8 # propability crossover
 P_M = 0.01 # propability mutation
 GENERASI = 100 # jumlah generasi
