@@ -19,17 +19,17 @@
 ##  =========== PEMBAGIAN TUGAS ===========
 ##  Sistem 50/50
 ##  Daniyal: 
-    ## Pendefinisian konstanta
+    ## pendefinisian konstanta
     ## fungsi_matematis()
     ## insialisasi_populasi()
     ## dekode_kromosom()
     ## fitness()
 ##  Riziq:
     ## selection()
-    ## def crossover():
-    ## def mutation():
-    ## def Generation_Switch():
-    ## def main():
+    ## crossover():
+    ## mutation():
+    ## generation_switch():
+    ## main():
 
 ## 1. Definisi Tugas
 ## Diberikan suatu fungsi untuk mencari nilai 𝑥1 dan 𝑥2 sehingga diperoleh nilai minimum dari fungsi matematis berikut:
