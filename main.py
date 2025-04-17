@@ -19,7 +19,7 @@
 ##  =========== PEMBAGIAN TUGAS ===========
 ##  Sistem 50/50
 ##  Daniyal: 
-    #3 Pendefinisian konstanta
+    ## Pendefinisian konstanta
     ## fungsi_matematis()
     ## insialisasi_populasi()
     ## dekode_kromosom()
