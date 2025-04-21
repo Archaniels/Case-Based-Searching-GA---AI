@@ -110,7 +110,7 @@ def dekode_kromosom(kromosom):
     return x1, x2
 
 #perhitungan fitness
-def fitness(populasi)
+def fitness(populasi):
     fitness_values = []
     for kromosom in populasi:
         # dekode kromosom menjadi nilai x1 dan x2 rentang [-10, 10]
