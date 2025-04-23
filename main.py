@@ -74,7 +74,7 @@ PANJANG_KROMOSOM = 20 # panjang kromosom binary
 BIT_PER_VAR = 10 # variable x1 dan x2 direpresentasikan dengan 10 bit dalam kromosaom binary
 POPULATION_SIZE = 50 # ukuran populasi
 P_C = 0.8 # propability crossover
-P_M = 0.01 # propability mutation
+P_M = 0.1 # propability mutation
 GENERASI = 100 # jumlah generasi
 
 # fungsi matematis untuk mencari nilai 𝑥1 dan 𝑥2 sehingga diperoleh nilai minimum
@@ -189,7 +189,7 @@ def mutation(offspring):
     return mutated_offspring
     
 #penggantian generasi
-def generation_switch(current_population, offspring, elitism_count=2):
+def generation_switch(current_population, offspring, elitism_count=0):
     # Hitung fitness untuk populasi saat ini
     current_fitness = fitness(current_population)
     
